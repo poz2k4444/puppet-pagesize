@@ -18,8 +18,8 @@ module or manifest with `include pagesize`
 
 ##Testing
 
-In order to test the facter you have to install `rspec_helper` gem from the
-official repositories and just run `rspec` in the root path of the module
+In order to test the facter you have to install `rspec-puppet` gem from the
+official repositories and just run `rspec` in the root path of the module.
 
 This module has been tested on:
 
