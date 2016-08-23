@@ -3,16 +3,13 @@
 require 'spec_helper'
 
 describe "pagesize", :type => :fact do
-  before { Facter.clear }
-  after { Facter.clear }
 
   context "linux" do
-    kernel = Facter.fact(:kernel).value
-    arch = Facter.fact(:architecture).value
-    if kernel == 'Linux' and arch == 'amd64'
-      it "should return 4096" do
-        expect(Facter.fact(:pagesize).value).to eq('4096')
-      end
+    pagesize = Facter::Core::Execution.exec('getconf PAGESIZE')
+
+    it "should return pagesize" do
+      expect(Facter.fact(:pagesize).value).to eq(pagesize)
     end
+
   end
 end
