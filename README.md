@@ -14,7 +14,8 @@ Clone this repository into your modules folder with:
 ##Usage
 
 After installation, you can use the custom fact by including the module in your
-module or manifest with `include pagesize`
+module or manifest with `include pagesize` or you can copy the pagesize.rb file
+into your own facter folder.
 
 ##Testing
 
